@@ -4,15 +4,15 @@
 # Example:
 # myMatrix = matrix(c(2, 4, 3, 5), nrow=2, ncol=2)
 # mySpecialMatrix = makeCacheMatrix(myMatrix)
-makeCacheMatrix = function(x = matrix()) {
-    m = NULL
-    set = function(y) {
+makeCacheMatrix <- function(x = matrix()) {
+    m <- NULL
+    set <- function(y) {
         x <<- y
         m <<- NULL
     }
-    get = function() x
-    setinverse = function(solve) m = solve
-    getinverse = function() m
+    get <- function() x
+    setinverse <- function(solve) m <- solve
+    getinverse <- function() m
     list(
         set = set,
         get = get,
@@ -26,8 +26,8 @@ makeCacheMatrix = function(x = matrix()) {
 # otherwise this function returns error.
 # Example:
 # cacheSolve(mySpecialMatrix)
-cacheSolve = function(x, ...) {
-    m = x$getinverse()
+cacheSolve <- function(x, ...) {
+    m <- x$getinverse()
     # return the cached matrix, if available
     if (! is.null(m)) {
         message("Getting cached data")
@@ -35,8 +35,8 @@ cacheSolve = function(x, ...) {
     }
     # not cached?  let's calculate the inverse,
     # and store it in cache
-    data = x$get()
-    m = solve(data, ...)
+    data <- x$get()
+    m <- solve(data, ...)
     x$setinverse(m)
     m
 }
