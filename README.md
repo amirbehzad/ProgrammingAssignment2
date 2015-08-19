@@ -1,10 +1,13 @@
-### Solution to 2nd Programming Assignment
+### R Programming - Coursera (AUG 2015)
+### Solution for the 2nd Programming Assignment
 
 This is my solution to 2nd programming assignment, from the "R Programming"
 course, provided by coursera.  The question is to write a function in R
 cache the inverse of a given matrix.
 
-To run the test, try this:
+Please explore the contents of cachematrix.R
+
+You can also run the test:
 
 <!-- -->
 
